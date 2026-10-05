@@ -305,7 +305,10 @@ em { font-style: normal; }
 /* ---------------- 窄屏 ---------------- */
 @media (max-width: 720px) {
   .topbar__inner { padding: 12px 14px 0; gap: 10px; }
+  .topbar__tools { flex: 1 1 100%; min-width: 0; }
+  .icon-btn { width: 34px; height: 34px; }
   .search { min-width: 0; flex: 1; }
+  .search input { min-width: 0; }
   .tabs { padding: 10px 14px 0; }
   .wrap { padding: 16px 14px 32px; }
   .form { padding: 14px; }
