@@ -1,0 +1,15 @@
+[
+  { "id": "ctrl-l1", "name": "Controller L1", "type": "box", "capacity": 2600000, "ports": 2, "note": "小间距小屏 / 单箱体演示" },
+  { "id": "ctrl-l2", "name": "Controller L2", "type": "box", "capacity": 3900000, "ports": 4, "note": "室内固装常规" },
+  { "id": "ctrl-m3", "name": "Controller M3", "type": "box", "capacity": 6500000, "ports": 10, "note": "室内大屏 / 户外常规" },
+  { "id": "ctrl-h2", "name": "Controller H2", "type": "box", "capacity": 13000000, "ports": 8, "note": "室内超大屏 / 4K 级" },
+  { "id": "ctrl-h4", "name": "Controller H4", "type": "box", "capacity": 23000000, "ports": 16, "note": "单机上限" },
+  {
+    "id": "frame-f8",
+    "name": "机箱 F8",
+    "type": "frame",
+    "slots": 8,
+    "card": { "id": "card-c400", "name": "卡 C400", "capacity": 4000000 },
+    "note": "插卡式机箱：带载超单机上限时使用"
+  }
+]

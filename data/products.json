@@ -1,0 +1,288 @@
+[
+  {
+    "id": "series-a",
+    "name": "Series A",
+    "usage": "indoor",
+    "cabinet": {
+      "w": 600,
+      "h": 337.5
+    },
+    "pitches": [
+      {
+        "pitch": 0.9375,
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "pitch": 1.25,
+        "pixels": [
+          480,
+          270
+        ]
+      }
+    ],
+    "brightness": 600,
+    "refresh": 7680,
+    "grayScale": 16,
+    "contrast": "8000:1",
+    "ip": {
+      "front": "IP30",
+      "back": "IP30"
+    },
+    "scenes": [
+      "control-room",
+      "conference-room"
+    ],
+    "install": [
+      "壁挂",
+      "钢结构落地",
+      "包边"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 380,
+      "avgPerSqm": 127
+    }
+  },
+  {
+    "id": "series-b",
+    "name": "Series B",
+    "usage": "indoor",
+    "cabinet": {
+      "w": 960,
+      "h": 540
+    },
+    "pitches": [
+      {
+        "pitch": 1.5,
+        "pixels": [
+          640,
+          360
+        ]
+      },
+      {
+        "pitch": 1.875,
+        "pixels": [
+          512,
+          288
+        ]
+      }
+    ],
+    "brightness": 800,
+    "refresh": 7680,
+    "grayScale": 16,
+    "contrast": "6000:1",
+    "ip": {
+      "front": "IP40",
+      "back": "IP40"
+    },
+    "scenes": [
+      "corporate-lobby",
+      "conference-room"
+    ],
+    "install": [
+      "壁挂",
+      "吊梁"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 438,
+      "avgPerSqm": 146
+    }
+  },
+  {
+    "id": "series-j",
+    "name": "Series J",
+    "usage": "indoor",
+    "cabinet": {
+      "w": 500,
+      "h": 500
+    },
+    "pitches": [
+      {
+        "pitch": 2.5,
+        "pixels": [
+          200,
+          200
+        ]
+      },
+      {
+        "pitch": 2.604,
+        "pixels": [
+          192,
+          192
+        ]
+      }
+    ],
+    "brightness": 1000,
+    "refresh": 3840,
+    "grayScale": 14,
+    "contrast": "5000:1",
+    "ip": {
+      "front": "IP40",
+      "back": "IP40"
+    },
+    "scenes": [
+      "conference-room",
+      "stage-rental"
+    ],
+    "install": [
+      "吊梁",
+      "落地桁架"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 420,
+      "avgPerSqm": 140
+    }
+  },
+  {
+    "id": "series-d",
+    "name": "Series D",
+    "usage": "indoor",
+    "cabinet": {
+      "w": 500,
+      "h": 500
+    },
+    "pitches": [
+      {
+        "pitch": 2.976,
+        "pixels": [
+          168,
+          168
+        ]
+      },
+      {
+        "pitch": 3.91,
+        "pixels": [
+          128,
+          128
+        ]
+      }
+    ],
+    "brightness": 1200,
+    "refresh": 3840,
+    "grayScale": 14,
+    "contrast": "5000:1",
+    "ip": {
+      "front": "IP40",
+      "back": "IP40"
+    },
+    "scenes": [
+      "conference-room",
+      "corporate-lobby"
+    ],
+    "install": [
+      "壁挂",
+      "钢结构落地",
+      "包边"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 450,
+      "avgPerSqm": 150
+    }
+  },
+  {
+    "id": "series-h",
+    "name": "Series H",
+    "usage": "outdoor",
+    "cabinet": {
+      "w": 500,
+      "h": 500
+    },
+    "pitches": [
+      {
+        "pitch": 3.91,
+        "pixels": [
+          128,
+          128
+        ]
+      },
+      {
+        "pitch": 4.81,
+        "pixels": [
+          104,
+          104
+        ]
+      }
+    ],
+    "brightness": 5000,
+    "refresh": 3840,
+    "grayScale": 14,
+    "contrast": "5000:1",
+    "ip": {
+      "front": "IP65",
+      "back": "IP65"
+    },
+    "scenes": [
+      "outdoor-billboard",
+      "stage-rental"
+    ],
+    "install": [
+      "立柱式",
+      "落地式",
+      "壁挂"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 500,
+      "avgPerSqm": 125
+    }
+  },
+  {
+    "id": "series-e",
+    "name": "Series E",
+    "usage": "outdoor",
+    "cabinet": {
+      "w": 1280,
+      "h": 960
+    },
+    "pitches": [
+      {
+        "pitch": 6.66,
+        "pixels": [
+          192,
+          144
+        ]
+      },
+      {
+        "pitch": 8,
+        "pixels": [
+          160,
+          120
+        ]
+      },
+      {
+        "pitch": 10,
+        "pixels": [
+          128,
+          96
+        ]
+      }
+    ],
+    "brightness": 6000,
+    "refresh": 3840,
+    "grayScale": 14,
+    "contrast": "5000:1",
+    "ip": {
+      "front": "IP65",
+      "back": "IP65"
+    },
+    "scenes": [
+      "outdoor-billboard"
+    ],
+    "install": [
+      "立柱式",
+      "落地式",
+      "壁挂"
+    ],
+    "hasReceiverCard": true,
+    "power": {
+      "maxPerSqm": 540,
+      "avgPerSqm": 135
+    }
+  }
+]

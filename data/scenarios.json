@@ -1,0 +1,96 @@
+{
+  "scenes": [
+    {
+      "id": "control-room",
+      "label": "控制室 / 指挥中心",
+      "usage": "indoor",
+      "picks": ["series-a", "series-b", "series-j"],
+      "pitchHint": [0.9, 1.3],
+      "install": ["壁挂", "钢结构落地", "包边"],
+      "distanceHint": 20,
+      "accessories": ["备品箱体 2%", "航空箱", "信号备份链路"]
+    },
+    {
+      "id": "conference-room",
+      "label": "会议室 / 报告厅",
+      "usage": "indoor",
+      "picks": ["series-b", "series-j", "series-d"],
+      "pitchHint": [1.2, 1.8],
+      "install": ["壁挂", "吊梁", "钢结构落地", "包边"],
+      "distanceHint": 30,
+      "accessories": ["备品箱体 2%", "包边型材", "检修走道"]
+    },
+    {
+      "id": "corporate-lobby",
+      "label": "企业大堂 / 形象墙",
+      "usage": "indoor",
+      "picks": ["series-b", "series-d", "series-a"],
+      "pitchHint": [1.2, 2.0],
+      "install": ["壁挂", "钢结构落地", "包边"],
+      "distanceHint": 40,
+      "accessories": ["备品箱体 2%", "包边型材", "散热风道"]
+    },
+    {
+      "id": "stage-rental",
+      "label": "舞台 / 租赁",
+      "usage": "indoor",
+      "picks": ["series-j", "series-h", "series-d"],
+      "pitchHint": [2.5, 4.0],
+      "install": ["吊梁", "落地桁架"],
+      "distanceHint": 60,
+      "accessories": ["快锁吊梁", "航空箱", "备品箱体 5%"]
+    },
+    {
+      "id": "outdoor-billboard",
+      "label": "户外广告大牌",
+      "usage": "outdoor",
+      "picks": ["series-e", "series-h"],
+      "pitchHint": [6, 7],
+      "install": ["立柱式", "落地式", "壁挂"],
+      "distanceHint": 250,
+      "accessories": ["备品箱体 2%", "避雷器", "防水检修门"]
+    }
+  ],
+  "transmission": [
+    {
+      "id": "cable",
+      "label": "网线直连",
+      "maxDistance": 100,
+      "components": [{ "name": "超六类屏蔽网线", "qty": 1 }]
+    },
+    {
+      "id": "mmf",
+      "label": "多模光纤",
+      "maxDistance": 500,
+      "components": [
+        { "name": "光电转换器", "qty": 2, "note": "发送端 + 接收端各一台" },
+        { "name": "多模 LC 双芯光纤", "qty": 1 },
+        { "name": "10G SFP+ 多模光模块", "qty": 2 }
+      ]
+    },
+    {
+      "id": "smf",
+      "label": "单模光纤",
+      "maxDistance": null,
+      "components": [
+        { "name": "光电转换器", "qty": 2, "note": "发送端 + 接收端各一台" },
+        { "name": "单模 LC 双芯光纤", "qty": 1 },
+        { "name": "10G SFP+ 单模光模块", "qty": 2 }
+      ]
+    }
+  ],
+  "questionnaire": [
+    { "id": "scene", "label": "使用场景", "type": "select", "optionsFrom": "scenes", "weight": 1 },
+    { "id": "width", "label": "安装宽度（米）", "type": "number", "unit": "m", "weight": 1 },
+    { "id": "height", "label": "安装高度（米）", "type": "number", "unit": "m", "weight": 1 },
+    { "id": "viewDistance", "label": "最佳观看距离（米）", "type": "number", "unit": "m", "weight": 1 },
+    { "id": "install", "label": "安装方式", "type": "select", "optionsFrom": "scene.install", "weight": 1 },
+    { "id": "signalDistance", "label": "信号源到屏体距离（米）", "type": "number", "unit": "m", "weight": 1 },
+    { "id": "budget", "label": "预算档位", "type": "select", "options": ["经济", "标准", "高配"], "weight": 1 }
+  ],
+  "optionCountRule": [
+    { "minKnown": 5, "options": 1 },
+    { "minKnown": 3, "options": 2 },
+    { "minKnown": 0, "options": 3, "speculative": true }
+  ]
+}

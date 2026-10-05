@@ -1,0 +1,13 @@
+{
+  "name": "personal-plan-generator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LED 方案规划器 —— 数据驱动的方案生成器（个人自用）",
+  "scripts": {
+    "test": "node --test test/",
+    "demo": "node scripts/demo.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

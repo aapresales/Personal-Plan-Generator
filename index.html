@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LED 方案规划器</title>
+<meta name="description" content="数据驱动的 LED 显示屏方案生成器：箱体矩阵排布、控制器选型、传输链路、功耗配电，一键出方案。" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232f6df6'/><g fill='%23fff'><rect x='7' y='8' width='5' height='4' rx='1'/><rect x='14' y='8' width='5' height='4' rx='1'/><rect x='21' y='8' width='4' height='4' rx='1'/><rect x='7' y='14' width='5' height='4' rx='1'/><rect x='14' y='14' width='5' height='4' rx='1'/><rect x='21' y='14' width='4' height='4' rx='1'/><rect x='7' y='20' width='5' height='4' rx='1'/><rect x='14' y='20' width='5' height='4' rx='1'/><rect x='21' y='20' width='4' height='4' rx='1'/></g></svg>" />
+<link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="brand">
+      <span class="brand__dot"></span>
+      <div>
+        <h1 class="brand__title">LED 方案规划器</h1>
+        <p class="brand__sub">箱体矩阵排布 · 控制器选型 · 传输链路 · 功耗配电</p>
+      </div>
+    </div>
+    <div class="topbar__tools">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="globalSearch" type="search" placeholder="搜索产品 / 知识条目…" autocomplete="off" />
+      </label>
+      <button id="themeToggle" class="icon-btn" type="button" title="切换主题" aria-label="切换主题">◐</button>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab is-active" data-tab="planner" type="button">方案配置器</button>
+    <button class="tab" data-tab="products" type="button">产品库</button>
+    <button class="tab" data-tab="knowledge" type="button">知识层</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ 配置器 ============ -->
+  <section class="panel is-active" id="panel-planner">
+    <form class="form card" id="planForm" autocomplete="off">
+      <div class="form__grid">
+        <label class="field">
+          <span class="field__label">使用场景</span>
+          <select id="sceneId" name="sceneId"></select>
+        </label>
+
+        <label class="field">
+          <span class="field__label">尺寸输入方式</span>
+          <select id="sizeMode" name="sizeMode">
+            <option value="wh">宽 × 高（推荐）</option>
+            <option value="area">只知道面积</option>
+          </select>
+        </label>
+
+        <label class="field" data-mode="wh">
+          <span class="field__label">安装宽度 <em>m</em></span>
+          <input id="widthM" name="widthM" type="number" min="0.1" step="0.001" value="6" />
+        </label>
+
+        <label class="field" data-mode="wh">
+          <span class="field__label">安装高度 <em>m</em></span>
+          <input id="heightM" name="heightM" type="number" min="0.1" step="0.001" value="3.375" />
+        </label>
+
+        <label class="field" data-mode="area" hidden>
+          <span class="field__label">屏体面积 <em>m²</em></span>
+          <input id="areaSqm" name="areaSqm" type="number" min="0.1" step="0.1" value="20" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">信号源到屏体距离 <em>m</em></span>
+          <input id="distanceM" name="distanceM" type="number" min="0" step="1" value="30" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">生成方案数</span>
+          <select id="options" name="options">
+            <option value="1">1 个（首选）</option>
+            <option value="2">2 个</option>
+            <option value="3">3 个</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form__actions">
+        <button class="btn btn--primary" type="submit">生成方案</button>
+        <button class="btn btn--ghost" type="reset" id="resetBtn">重置</button>
+        <span class="form__hint" id="formHint"></span>
+      </div>
+    </form>
+
+    <div id="plannerResults" class="results"></div>
+  </section>
+
+  <!-- ============ 产品库 ============ -->
+  <section class="panel" id="panel-products">
+    <div class="grid" id="productGrid"></div>
+    <p class="empty" id="productEmpty" hidden>没有匹配的产品。</p>
+  </section>
+
+  <!-- ============ 知识层 ============ -->
+  <section class="panel" id="panel-knowledge">
+    <div class="knowledge" id="knowledgeWrap"></div>
+    <p class="empty" id="knowledgeEmpty" hidden>没有匹配的知识条目。</p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>数据驱动的方案生成器 · 纯静态零依赖</span>
+  <span id="dataMeta"></span>
+</footer>
+
+<script type="module" src="./src/app.js"></script>
+</body>
+</html>
